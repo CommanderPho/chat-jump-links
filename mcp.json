@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "jump": {
+      "command": "node",
+      "args": [
+        "${CURSOR_PLUGIN_ROOT}/mcp-server/index.js"
+      ],
+      "env": {
+        "CHAT_JUMP_LINKS_PLUGIN_ROOT": "${CURSOR_PLUGIN_ROOT}"
+      }
+    }
+  }
+}

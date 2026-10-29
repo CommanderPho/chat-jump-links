@@ -1,0 +1,45 @@
+---
+description: Cite existing workspace code with clickable startLine:endLine:filepath fences so chat can jump and highlight the range.
+alwaysApply: true
+---
+
+# Always cite workspace code
+
+When showing or referring to code that already exists in the workspace, you MUST use a code reference fence so the chat shows a jump-link control. Clicking that control jumps to the file and highlights the range.
+
+The fence info-string is `startLine:endLine:filepath` only — no language tag:
+
+    ```12:15:src/app.ts
+    export function foo() {
+      return 1;
+    }
+    ```
+
+## Required format
+
+- Header is `startLine:endLine:filepath` only. Do not add `python`, `ts`, or any language tag.
+- Include at least one real line of code in the body. Empty fences do not render a jump.
+- Put the opening backticks at column 0 (not indented inside a list).
+- In sentences, mention paths with single backticks. Put the clickable jump on the fence, never on inline triple-backticks.
+
+## When you already know the location
+
+If this turn’s `Read` / `Grep` / other file tools already gave a verified filepath and line range, cite that immediately. Do not invent line numbers.
+
+## When you do not have a verified location
+
+If you are about to show existing code (or the user wants to jump / open / find it) and you do **not** have a verified filepath + line range from this turn, call MCP `resolve_code_jump` on server `plugin-chat-jump-links-jump` **before** writing the answer.
+
+Pass:
+
+- `snippet`: 1–8 literal lines (strip `... existing code ...` placeholders)
+- `workspace_roots`: absolute workspace folder paths from this session
+- optional `hint_path`, `hint_symbol`, `glob`
+
+Then paste `best.citation_fence_header` unchanged, with the matched body. Do not rewrite the header.
+
+If several matches are close, cite `best` and list other `filepath:startLine` in prose. If there is no match, say so and do not fake a citation.
+
+## New code
+
+Proposed code that is **not** in the repo uses a normal language fence (for example ` ```python `). Do not invent a path for it.

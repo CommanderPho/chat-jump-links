@@ -1,0 +1,30 @@
+{
+  "name": "chat-jump-links",
+  "displayName": "Chat Jump Links",
+  "version": "1.0.0",
+  "description": "One-click jumps from Cursor chat code mentions to the matching workspace file and line. Uses native citation fences as the jump-and-highlight control, and a literal-match search when the model omits a path.",
+  "author": {
+    "name": "pho"
+  },
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "citations",
+    "navigation",
+    "jump",
+    "code-reference",
+    "search",
+    "highlight"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "chat",
+    "navigation",
+    "citations",
+    "search"
+  ],
+  "skills": "./skills/",
+  "rules": "./rules/",
+  "commands": "./commands/",
+  "mcpServers": "./mcp.json"
+}
