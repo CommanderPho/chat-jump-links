@@ -56,3 +56,10 @@ Paste a snippet, a quoted identifier, or say “the last code block.” Optional
 - Brand-new proposed code is not linked (there is nothing in the workspace to jump to).
 - Ambiguous snippets cite the top-ranked match and list alternatives; they do not invent line numbers.
 - After-the-fact rewrite of an already-rendered assistant bubble is not possible with current hooks.
+
+
+## Initial Prompt:
+```
+/create-plugin-scaffold Write a new Cursor Plugin that allows easy-click navigation to any code referenced in a Cursor chat by including a specific jump-link button. Clicking the jump-link button jumps directly to that location in code and highlights it. If the model doesn't produce a direct reference to workspace code, the plugin will perform a search in relevant files for a literal match in the background to find the most-likely matching code location and provide a link to that.
+
+```
