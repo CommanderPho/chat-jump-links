@@ -1,0 +1,44 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Default Dark Modern",
+		"editor.semanticHighlighting.enabled": true,
+		"editor.bracketPairColorization.enabled": false,
+		"workbench.colorCustomizations": {
+			"foreground": "#FFFFFF",
+			"focusBorder": "#FFFFFF",
+			"editor.background": "#000000",
+			"editor.foreground": "#FFFFFF",
+			"sideBar.background": "#000000",
+			"activityBar.background": "#000000",
+			"statusBar.background": "#000000",
+			"titleBar.activeBackground": "#000000",
+			"panel.background": "#000000",
+			"terminal.background": "#000000",
+			"tab.activeBackground": "#000000",
+			"button.background": "#FFFFFF",
+			"button.foreground": "#000000"
+		},
+		"editor.tokenColorCustomizations": {
+			"comments": "#808080",
+			"strings": "#C0C0C0",
+			"keywords": "#FFFFFF",
+			"numbers": "#E0E0E0",
+			"types": "#FFFFFF",
+			"functions": "#E8E8E8",
+			"variables": "#FFFFFF"
+		},
+		"editor.semanticTokenColorCustomizations": {
+			"enabled": true,
+			"rules": {
+				"*": "#FFFFFF",
+				"comment": "#808080",
+				"string": "#C0C0C0"
+			}
+		}
+	}
+}
